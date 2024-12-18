@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chandana Yemul - Portfolio</title>
+    <style>
+        /* General Styles */
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            color: #000;
+            background-color: #00bfff; /* Neon blue background */
+            background: linear-gradient(135deg, #09164d, hwb(210 4% 78%)); /* Gradient neon blue */
+            /* Gradient background with neon blue shades */
+            overflow-x: hidden;
+        }
+
+        /* Container */
+        .container {
+            max-width: 800px;
+            /* Limit width for better readability */
+            margin: 20px auto;
+            /* Center the container */
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            /* Slightly transparent white background */
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+            animation: fadeIn 1s ease-in-out;
+            /* Fade-in animation */
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            /* Darker color for better contrast */
+        }
+
+        h2 {
+            margin-top: 20px;
+            color: #007BFF;
+            /* Blue color for section headings */
+            animation: slideInLeft 0.5s ease-out;
+            /* Slide-in animation for headings */
+        }
+
+        .certificate, .project {
+            margin-bottom: 15px;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            /* Light background for certificates and projects */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            /* Smooth transition effect */
+        }
+
+        .certificate:hover, .project:hover {
+            transform: translateY(-10px);
+            /* Lift effect on hover */
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+            /* Enhanced shadow on hover */
+        }
+
+        .back-link {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            text-decoration: none;
+            color: #007BFF;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .back-link:hover {
+            color: #0056b3;
+            /* Darker blue on hover */
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideInLeft {
+            from {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        .profile-photo {
+            width: 180px;
+            /* Set width */
+            height: 180px;
+            /* Set height to same as width */
+            margin-right: 30px;
+            /* Remove border-radius to make the photo square */
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+            /* Smooth transition for hover effect */
+        }
+
+        .profile-photo:hover {
+            transform: scale(1.1);
+            /* Zoom-in effect on hover */
+        }
+
+        .intro {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            color: #333;
+            font-weight: bold;
+            font-family: 'Montserrat', sans-serif;
+            animation: fadeInUp 1s ease-in-out;
+        }
+
+        .description {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: #555;
+            font-weight: bold;
+            font-style: italic;
+        }
+
+        .word {
+            display: inline-block;
+            opacity: 0;
+            transform: translateY(20px);
+            animation-duration: 0.5s;
+            animation-fill-mode: forwards;
+        }
+
+        .word:nth-child(1) {
+            animation-name: fadeInUp;
+            animation-delay: 0s;
+        }
+
+        .word:nth-child(2) {
+            animation-name: fadeInUp;
+            animation-delay: 0.5s;
+        }
+
+        .word:nth-child(3) {
+            animation-name: fadeInUp;
+            animation-delay: 1s;
+        }
+
+        .word:nth-child(4) {
+            animation-name: fadeInUp;
+            animation-delay: 1.5s;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-15px);
+            }
+        }
+
+        /* Add animation to intro text */
+        .intro {
+            animation: fadeInUp 1s ease-in-out;
+        }
+
+        /* Add animation to description text */
+        .description {
+            animation: fadeInUp 1.5s ease-in-out;
+        }
+
+        /* Add animation to certificates and projects */
+        .certificate, .project {
+            animation: fadeInUp 2s ease-in-out;
+        }
+
+        /* Add animation to back link */
+        .back-link {
+            animation: fadeInUp 2.5s ease-in-out;
+        }
+
+        /* Add smooth scrolling effect */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Add animation to scroll indicator */
+        .scroll-indicator {
+            animation: bounce 2s infinite;
+        }
+    </style>
+
+</head>
+
+<body>
+<!-- Introduction Section -->
+<div class="container" id="home">
+    <div style="display:flex; align-items:center;">
+        <img src="c:\Users\AKASH\Downloads\C2.jpg" alt="Chandana Yemul" class="profile-photo">
+        <div>
+            <h1 class="intro">
+                <span class="word">Hi,</span>
+                <span class="word">I’m</span>
+                <span class="word">Chandana</span>
+                <span class="word">Yemul</span>
+            </h1>
+            <p class="description">A BSc IT student with a passion for web development and creative design. I thrive on blending technical skills with creativity to deliver innovative solutions.</p>
+            <div class="contact-info">
+                <a href="https://github.com/chandana1312" target="_blank">GitHub</a>
+                <a href="mailto:chandanayemul1312@gmail.com">Email</a>
+                <a href="https://www.linkedin.com/in/chandana-yemul-a10348263/" target="_blank">LinkedIn</a>
+                <div>Contact: +91 7887807770</div>
+                <a href="#certificates" class="back-link">View Certificates & Projects</a>
+                <!-- Link to scroll down -->
+            </div>
+        </div>
+    </div>
+    <div class="scroll-indicator">&#8595;</div>
+    <!-- Scroll down indicator -->
+</div>
+
+<!-- Certificates Section -->
+<div class="container" id="certificates">
+    <h2>Certificates</h2>
+    <div class="certificate">
+        <strong>Python Participant Certificate</strong><br>
+        <a href="file:///C:/Users/Akash/Downloads/Chandana-Yemul-Python-3.4.3-Participant-Test-Certificate.pdf" target="_blank">Download Certificate</a>
+    </div>
+    <div class="certificate">
+        <strong>UI/UX Certificate</strong><br>
+        <a href="file:///C:/Users/Akash/Downloads/uiux%20certificate.pdf" target="_blank">Download Certificate</a>
+    </div>
+    <div class="certificate">
+        <strong>TCS ESG Certificate</strong><br>
+        <a href="file:///C:/Users/Akash/Downloads/TCS%20ESG.pdf" target="_blank">Download Certificate</a>
+    </div>
+
+    <!-- Current Project Section -->
+    <h2>Current Project</h2>
+    <div class="project">
+        <h3>Connectify - Final Year Project</h3>
+        <p>I am currently working on Connectify as my final year project. It is a specialized social networking platform designed exclusively for college students. The platform aims to enhance the college experience by facilitating connections, collaboration on academic projects, resource sharing, event participation, and private messaging.</p>
+        <p>This project prioritizes data privacy and security, providing a safe and engaging space for students. Technologies include HTML, CSS, JavaScript for the frontend, and PHP with MySQL for the backend. The project emphasizes user-friendly design and efficient functionality.</p>
+        <p><strong>College:</strong> SVKM's Usha Pravin Gandhi College of Arts Science and Commerce</p>
+        <p><strong>Degree:</strong> BSc IT (2022-2025)</p>
+        <a href="#home" class="back-link">Back to Home</a>
+        <!-- Link to go back to the main section -->
+    </div>
+</div>
+</body>
+</html>
